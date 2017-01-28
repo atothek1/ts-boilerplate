@@ -1,0 +1,1 @@
+export type MockServerSettings = {host: string, basePath: string, autoResponse?: boolean};

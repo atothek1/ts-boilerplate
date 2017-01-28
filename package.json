@@ -1,0 +1,27 @@
+{
+    "name": "typescript-boilerplate",
+    "version": "1.0.0",
+    "description": "This a base empty Project setup as starting point for fresh typescript projects.",
+    "main": "./app/src/Index.ts",
+    "scripts": {
+        "test": "test",
+        "build:dev": "webpack --define env=development",
+        "build:prod": "webpack --define env=production"
+    },
+    "author": "kaemmerer.alexander@gmail.com",
+    "license": "MIT",
+    "devDependencies": {
+        "@types/sinon": "^1.16.34",
+        "axios": "^0.15.3",
+        "clean-webpack-plugin": "^0.1.15",
+        "copy-webpack-plugin": "^4.0.1",
+        "html-webpack-plugin": "^2.26.0",
+        "sinon": "^1.17.7",
+        "ts-loader": "^2.0.0",
+        "ts-node": "^2.0.0",
+        "tslint": "^4.3.1",
+        "tslint-loader": "^3.3.0",
+        "typescript": "^2.1.5",
+        "webpack": "^1.14.0"
+    }
+}
