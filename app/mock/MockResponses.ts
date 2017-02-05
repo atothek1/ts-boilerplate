@@ -1,17 +1,7 @@
-import {MockServerSettings} from "./MockTypes";
+import {MockServerSettings, MockResponseMap, MockResponseData} from "./MockTypes";
 import {SinonFakeXMLHttpRequest} from "sinon";
 
-export interface MockResponseData {
-    statusCode: number;
-    headers?: {[header: string]: any};
-    body: (request: any) => string;
-}
 
-export interface MockResponseMap {
-    readonly GET: {[url: string]: MockResponseData};
-    readonly PUT: {[url: string]: MockResponseData};
-    readonly POST: {[url: string]: MockResponseData};
-}
 
 export default class MockResponses {
 
@@ -46,7 +36,7 @@ export default class MockResponses {
         request.respond(response.statusCode, response.headers, response.body(request));
     }
 
-    private getResponse(request: SinonFakeXMLHttpRequest): MockResponseData {
+    public getResponse(request: SinonFakeXMLHttpRequest): MockResponseData {
         let responseData = this.responseMap[request.method][request.url];
         if (!responseData) {
             let errorResponse = JSON.stringify({code: 404, message: "Not Found"});

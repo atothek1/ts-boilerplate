@@ -1,27 +1,42 @@
 {
-    "name": "typescript-boilerplate",
-    "version": "1.0.0",
-    "description": "This a base empty Project setup as starting point for fresh typescript projects.",
-    "main": "./app/src/Index.ts",
-    "scripts": {
-        "test": "test",
-        "build:dev": "webpack --define env=development",
-        "build:prod": "webpack --define env=production"
-    },
-    "author": "kaemmerer.alexander@gmail.com",
-    "license": "MIT",
-    "devDependencies": {
-        "@types/sinon": "^1.16.34",
-        "axios": "^0.15.3",
-        "clean-webpack-plugin": "^0.1.15",
-        "copy-webpack-plugin": "^4.0.1",
-        "html-webpack-plugin": "^2.26.0",
-        "sinon": "^1.17.7",
-        "ts-loader": "^2.0.0",
-        "ts-node": "^2.0.0",
-        "tslint": "^4.3.1",
-        "tslint-loader": "^3.3.0",
-        "typescript": "^2.1.5",
-        "webpack": "^1.14.0"
-    }
+  "name": "ts-boilerplate",
+  "version": "1.0.0",
+  "description": "This a base empty Project setup as starting point for fresh TypeScript projects.",
+  "main": "./app/src/Index.ts",
+  "scripts": {
+    "test": "mocha --growl --opts config/mocha.opts",
+    "build": "npm run build:dev",
+    "build:dev": "npm run test && webpack --config config/webpack.development.js",
+    "build:prod": "npm run test && webpack --config config/webpack.production.js",
+    "webpack": "webpack --config config/webpack.development.js",
+    "webpack:watch": "webpack --config config/webpack.development.js --watch"
+  },
+  "author": "kaemmerer.alexander@gmail.com",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/chai": "^3.4.34",
+    "@types/node": "^7.0.5",
+    "@types/sinon": "^1.16.34",
+    "@types/whatwg-fetch": "0.0.33",
+    "axios": "^0.15.3",
+    "chai": "^3.5.0",
+    "clean-webpack-plugin": "^0.1.15",
+    "copy-webpack-plugin": "^4.0.1",
+    "html-webpack-plugin": "^2.26.0",
+    "mocha": "^3.2.0",
+    "mocha-typescript": "^1.0.18",
+    "sinon": "^1.17.7",
+    "ts-loader": "^2.0.0",
+    "ts-node": "^2.0.0",
+    "tslint": "^4.3.1",
+    "tslint-loader": "^3.3.0",
+    "typescript": "^2.1.5",
+    "webpack": "^1.14.0",
+    "webpack-merge": "^2.6.1"
+  },
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "es6-promise": "^4.0.5",
+    "whatwg-fetch": "^2.0.2"
+  }
 }

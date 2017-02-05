@@ -1,8 +1,11 @@
 import {SinonFakeServer} from "sinon";
 import * as sinon from "sinon";
-import {MockServerSettings} from "./MockTypes";
+import {MockServerSettings, MockResponseMap} from "./MockTypes";
 import MockResponses from "./MockResponses";
-import {MockResponseMap} from "./MockResponses";
+
+// delete any possible native support for fetch
+// to make the MockServer works as expected
+delete self.fetch;
 
 export default class MockServer {
 
