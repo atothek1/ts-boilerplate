@@ -21,12 +21,7 @@ const config = webpackMerge(commonConfig, {
             PRODUCTION: JSON.stringify(PRODUCTION),
             DEVELOPMENT: JSON.stringify(DEVELOPMENT)
         })
-    ],
-
-    tslint: {
-        emitErrors: true,
-        failOnHint: true
-    }
+    ]
 });
 
 module.exports = config;

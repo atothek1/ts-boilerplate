@@ -1,3 +1,4 @@
+import {Url} from "ts-url";
 export interface ServiceRequest<TRequestData> {
     readonly url: string;
     readonly method: string;
@@ -27,6 +28,7 @@ export abstract class ClientService {
     }
 
     protected executeRequest<TResponseData, TRequestData>(request: ServiceRequest<TRequestData>): Promise<ServiceResponse<TResponseData, TRequestData>> {
+        let url = Url.fromUrlString(request.url);
         let promise = fetch(request.url, {
             method: request.method,
             headers: request.headers || undefined,

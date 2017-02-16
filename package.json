@@ -26,12 +26,14 @@
     "mocha": "^3.2.0",
     "mocha-typescript": "^1.0.18",
     "sinon": "^1.17.7",
+    "source-map-loader": "^0.1.6",
     "ts-loader": "^2.0.0",
     "ts-node": "^2.0.0",
-    "tslint": "^4.3.1",
-    "tslint-loader": "^3.3.0",
+    "ts-url": "git+https://github.com/atothek1/ts-url.git",
+    "tslint": "^4.4.2",
+    "tslint-loader": "^3.4.2",
     "typescript": "^2.1.5",
-    "webpack": "^1.14.0",
+    "webpack": "^2.2.1",
     "webpack-merge": "^2.6.1"
   },
   "dependencies": {
